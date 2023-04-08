@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucky Shrubs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aladin&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- let me add right semantics first -->
+
+    <header>
+      <div class="logo">
+        <img src="./assets/Lucky-Shrub-logos/Asset 2@3x.png" alt="" />
+      </div>
+      <div class="name">Lucky Shrubs</div>
+    </header>
+    <nav>
+      <div class="empty"></div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Buy</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="banner">
+        <img src="./assets/Rectangle 1.png" alt="" />
+        <div class="text">
+          <div class="one">
+            A beautiful plant is like having a friend around the house.
+          </div>
+          <div class="two">30% OFF THIS WEEKEND</div>
+          <div class="three">
+            Lorem ipsum dolor sit amet consectetur. Tincidunt sit varius
+            volutpat mauris odio eu porta. Aliquet egestas scelerisque faucibus
+            neque. Tristique dolor nibh est vel scelerisque cum tincidunt
+            venenatis faucibus. Ante ultricies fusce volutpat scelerisque quis
+            placerat lectus nibh.
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <article class="article1">
+          <h2>Book a service</h2>
+          <img src="./assets/nursery.webp" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            possimus, qui molestiae perferendis ex maxime labore sunt earum
+            totam accusantium voluptas quo ad. Eos voluptatem deleniti obcaecati
+            quia atque ea.
+          </p>
+          <h6>Read More....</h6>
+        </article>
+        <article class="article2">
+          <h2>Book a service</h2>
+          <img src="./assets/download.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            possimus, qui molestiae perferendis ex maxime labore sunt earum
+            totam accusantium voluptas quo ad. Eos voluptatem deleniti obcaecati
+            quia atque ea.
+          </p>
+          <h6>Read More....</h6>
+        </article>
+        <article class="article3">
+          <h2>Book a service</h2>
+          <img src="./assets/default-plant-nurseries-9.webp" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            possimus, qui molestiae perferendis ex maxime labore sunt earum
+            totam accusantium voluptas quo ad. Eos voluptatem deleniti obcaecati
+            quia atque ea.
+          </p>
+          <h6>Read More....</h6>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <div class="logo">
+        <img src="./assets/Lucky-Shrub-logos/Asset 2@3x.png" alt="" />
+      </div>
+      <div class="copyright">
+        <hr />
+        <h5>Copyright Lucky Shrubs</h5>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const text = document.querySelector(".text");
+
+    const myFunction = () => {
+      const height = text.offsetHeight;
+      // console.log(height)
+      box.style.height = text.offsetHeight + "px";
+    };
+
+    //set the height of the image
+    const box = document.querySelector(".banner");
+    box.style.height = text.offsetHeight + "px";
+
+    window.addEventListener("resize", myFunction);
+
+    const toggleButton = document.getElementsByClassName("toggle-button")[0];
+    const navbarLinks = document.getElementsByClassName("navbar-links")[0];
+
+    toggleButton.addEventListener("click", () => {
+      navbarLinks.classList.toggle("active");
+    });
+
+    const banner = document.getElementsByClassName("banner")[0];
+    const two = document.getElementsByClassName("two")[0];
+
+    banner.addEventListener("mouseover", () => {
+      two.classList.add("selected");
+    });
+
+    banner.addEventListener("mouseout", () => {
+      two.classList.remove("selected");
+    });
+  </script>
+</html>

@@ -1,0 +1,243 @@
+/* //use rem and em to set the sizes */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #c6f09c;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .logo img {
+  width: 8vh;
+}
+header .name {
+  font-family: "Grand Hotel", cursive;
+  color: #26877f;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 125px;
+  margin-left: 25px;
+}
+
+nav {
+  background-color: #26877f;
+  width: 90vw;
+  margin: auto;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty{
+    height: 80px;
+}
+
+nav ul {
+  /* width: 50%; */
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: "Aladin", cursive;
+  color: white;
+  padding: 1rem;
+  font-size: 2rem;
+  display: block;
+}
+
+nav ul li:hover {
+  background-color: black;
+  border-radius: 5px;
+}
+
+.toggle-button {
+  position: absolute;
+  right: 4rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  order: 1;
+  padding: 1rem;
+}
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+    nav {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        /* height: 40px; */
+        
+    }
+    nav .empty{
+        display: none;
+    }
+
+    nav ul{
+        display: none;
+    }
+  nav .active ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .toggle-button {
+    position: inherit;
+    display: flex;
+}
+}
+main .banner {
+  display: flex;
+  width: 90vw;
+  /* border: solid 5px #26877f; */
+  margin: auto;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20px;
+}
+
+main .banner img {
+  height: inherit;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+main .banner .text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  padding: 20px;
+}
+main .banner .one {
+  font-family: "Grand Hotel";
+  font-size: 4.5vw;
+  color: #ffffff;
+}
+main .banner .two {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 4.5vw;
+  color: #ffffff;
+  transform-origin: left top;
+  transition: transform 1s;
+}
+
+main .banner .selected{
+    transform: scale(1.05);
+    /* transform-origin: left top; */
+}
+
+
+
+main .banner .three {
+  font-family: "Lato", sans-serif;
+
+  color: #ffffff;
+}
+
+
+.box {
+  margin: auto;
+  width: 90vw;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.box article {
+  width: 30%;
+  background-color: #437362;
+  padding: 10px;
+  border-radius: 5px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.box article h2 {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.box article h6 {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  /* line-height: 20px; */
+  margin-top: 10px;
+}
+
+.box article img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: inherit;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  flex: 1 1 auto;
+}
+
+@media only screen and (max-width: 700px) {
+  main .banner .one {
+    font-size: 2rem;
+  }
+
+  main .banner .two {
+    font-size: 1.5rem;
+  }
+
+  .box article {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+footer .logo img {
+  width: 6vh;
+}
+
+footer {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 30px;
+}
+
+footer .copyright {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #437362;
+  font-family: "Lato", sans-serif;
+}
+
+footer hr {
+  width: 100%;
+  border: 1px solid #437362;
+  margin-bottom: 4px;
+}
